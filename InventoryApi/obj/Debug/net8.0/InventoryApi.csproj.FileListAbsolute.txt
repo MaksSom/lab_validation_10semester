@@ -37,3 +37,4 @@ E:\Labs\10th semester\tests\InventoryApi\obj\Debug\net8.0\refint\InventoryApi.dl
 E:\Labs\10th semester\tests\InventoryApi\obj\Debug\net8.0\InventoryApi.pdb
 E:\Labs\10th semester\tests\InventoryApi\obj\Debug\net8.0\InventoryApi.genruntimeconfig.cache
 E:\Labs\10th semester\tests\InventoryApi\obj\Debug\net8.0\ref\InventoryApi.dll
+E:\Labs\10th semester\tests\InventoryApi\obj\Debug\net8.0\InventoryApi.sourcelink.json

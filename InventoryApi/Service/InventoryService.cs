@@ -28,6 +28,20 @@ public class InventoryService : IInventoryService
         return await _productRepository.TryDecrementQuantityAsync(productId, amount);
     }
 
+    public async Task<bool> RestockProductAsync(string id, int amount)
+    {
+        if (!IsValidRestockAmount(amount))
+        {
+            return false; 
+        }
+
+        var isSuccess = await _productRepository.IncrementQuantityAsync(id, amount);
+
+        return isSuccess;
+    }
+
+private bool IsValidRestockAmount(int amount) => amount > 0;
+
     public async Task<bool> UpdateProductAsync(string id, string name, int quantity, decimal price)
     {
         var product = await _productRepository.GetByIdAsync(id);

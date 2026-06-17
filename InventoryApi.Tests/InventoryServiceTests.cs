@@ -38,6 +38,23 @@ public class InventoryServiceTests
         _productRepoMock.Verify(repo => repo.UpdateAsync(It.IsAny<string>(), It.IsAny<Product>()), Times.Never);
     }
 
+    [Fact]
+    public async Task RestockProduct_ShouldIncreaseQuantity_WhenProductExists()
+    {
+        var productId = "restock_id";
+        var addedAmount = 50;
+
+        // Налаштовуємо Mock на успішне збільшення кількості
+        _productRepoMock.Setup(repo => repo.IncrementQuantityAsync(productId, addedAmount))
+            .ReturnsAsync(true);
+
+        // Викликаємо метод, якого ще не існує в сервісі
+        var result = await _sut.RestockProductAsync(productId, addedAmount);
+
+        result.Should().BeTrue();
+        _productRepoMock.Verify(repo => repo.IncrementQuantityAsync(productId, addedAmount), Times.Once);
+    }
+
     [Theory]
     [InlineData("id_1", 10, true)]
     [InlineData("id_2", 0, false)]

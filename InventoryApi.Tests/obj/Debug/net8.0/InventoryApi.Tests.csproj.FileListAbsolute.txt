@@ -425,3 +425,4 @@ E:\Labs\10th semester\tests\InventoryApi.Tests\bin\Debug\net8.0\refs\WindowsBase
 E:\Labs\10th semester\tests\InventoryApi.Tests\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Testing.dll
 E:\Labs\10th semester\tests\InventoryApi.Tests\bin\Debug\net8.0\Microsoft.AspNetCore.TestHost.dll
 E:\Labs\10th semester\tests\InventoryApi.Tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+E:\Labs\10th semester\tests\InventoryApi.Tests\obj\Debug\net8.0\InventoryApi.Tests.sourcelink.json

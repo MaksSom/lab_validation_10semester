@@ -10,4 +10,5 @@ public interface IProductRepository
     Task UpdateAsync(string id, Product product);
     Task<bool> TryDecrementQuantityAsync(string id, int amount);
     Task DeleteAsync(string id);
+    Task<bool> IncrementQuantityAsync(string id, int amount);
 }
